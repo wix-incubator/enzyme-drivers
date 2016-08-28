@@ -44,6 +44,7 @@
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-0": "^6.5.0",
     "eslint": "^2.0.0",
+    "eslint-plugin-react": "^6.2.0",
     "jasmine": "^2.4.1",
     "jasmine-reporters": "^2.2.0",
     "jasmine2-reporter": "^0.2.0",
