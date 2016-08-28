@@ -2,10 +2,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.wixpress.npm</groupId>
-    <artifactId>crm-mobile-common</artifactId>
+    <artifactId>enzyme-drivers</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>crm-mobile-common</name>
-    <description>crm-mobile-common</description>
+    <name>enzyme-drivers</name>
+    <description>enzyme-drivers</description>
     <packaging>pom</packaging>
     <parent>
         <groupId>com.wixpress.common</groupId>
@@ -14,8 +14,8 @@
     </parent>
     <developers>
         <developer>
-            <name>Aaron Greenwald</name>
-            <email>aarong@wix.com</email>
+            <name>Ofir Dagan</name>
+            <email>ofird@wix.com</email>
         </developer>
     </developers>
     <build>
