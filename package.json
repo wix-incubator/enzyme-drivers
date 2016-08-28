@@ -1,0 +1,71 @@
+{
+  "name": "enzyme-drivers",
+  "version": "1.0.0",
+  "description": "testing utility lib",
+  "main": "lib\\index.js",
+  "scripts": {
+    "build": "export BABEL_ENV=specs; babel src --out-dir lib --source-maps",
+    "lint": "eslint src test",
+    "pretest": "npm run lint",
+    "test": "export JASMINE_CONFIG_PATH=test/jasmine.json; export BABEL_ENV=specs; jasmine",
+    "release": "wnpm-release -- --no-shrinkwrap",
+    "postrelease": "echo \"##teamcity[buildStatus text='Version: `jq -r '.version' package.json`; {build.status.text}']\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wix/enzyme-drivers.git"
+  },
+  "keywords": [
+    "enzyme",
+    "testing",
+    "unit",
+    "test",
+    "component",
+    "test",
+    "react",
+    "react-native",
+    "rn"
+  ],
+  "author": "Ofir Dagan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wix/enzyme-drivers/issues"
+  },
+  "homepage": "https://github.com/wix/enzyme-drivers#readme",
+  "dependencies": {
+    "enzyme": "^2.4.1",
+    "proxyquire": "^1.7.10"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-core": "^6.13.2",
+    "babel-polyfill": "^6.13.0",
+    "react-dom": "^15.2.1",
+    "react-native": "0.25.1",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "eslint": "^3.2.2",
+    "jasmine": "^2.4.1",
+    "jasmine-reporters": "^2.2.0",
+    "jasmine2-reporter": "^0.2.0",
+    "react": "^15.3.1",
+    "react-native-mock": "^0.2.6"
+  },
+  "babel": {
+    "env": {
+      "specs": {
+        "presets": [
+          "es2015",
+          "react",
+          "stage-0"
+        ],
+        "retainLines": true
+      }
+    }
+  },
+  "optionalDependencies": {
+    "wnpm-ci": "^6.1.166",
+    "eslint-config-wix": "^1.0.138"
+  }
+}
