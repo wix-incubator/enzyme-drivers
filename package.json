@@ -2,7 +2,7 @@
   "name": "enzyme-drivers",
   "version": "1.0.0",
   "description": "testing utility lib",
-  "main": "lib\\index.js",
+  "main": "lib/index.js",
   "scripts": {
     "build": "export BABEL_ENV=specs; babel src --out-dir lib --source-maps",
     "lint": "eslint src test",

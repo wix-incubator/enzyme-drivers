@@ -4,7 +4,7 @@ describe('base driver test', () => {
   let driver;
 
   beforeEach(() => {
-    driver = new MyDriver('../test/mocks/dummy-component', {});
+    driver = new MyDriver('../test/mocks/dummy-component', {}, false);
   });
 
   it('should render component', () => {

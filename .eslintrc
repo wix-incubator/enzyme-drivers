@@ -13,7 +13,8 @@
     "no-use-before-define": 0
   },
   "globals": {
-    "require": true
+    "require": true,
+    "module": true
   },
   "env": {
     "jasmine": true
