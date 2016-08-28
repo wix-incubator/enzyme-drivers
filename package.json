@@ -47,8 +47,8 @@
     "jasmine": "^2.4.1",
     "jasmine-reporters": "^2.2.0",
     "jasmine2-reporter": "^0.2.0",
-    "react": "^15.0.0",
-    "react-dom": "^15.0.0",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
     "react-native": "0.25.1",
     "react-native-mock": "^0.2.6"
   },
