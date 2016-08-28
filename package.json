@@ -67,5 +67,8 @@
   "optionalDependencies": {
     "wnpm-ci": "^6.1.166",
     "eslint-config-wix": "^1.0.138"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   }
 }
