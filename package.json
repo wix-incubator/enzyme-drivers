@@ -44,11 +44,8 @@
     "babel-preset-es2015": "^6.13.2",
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-0": "^6.5.0",
-    "eslint": "^2.0.0",
-    "eslint-config-xo": "^0.15.4",
-    "eslint-config-xo-react": "^0.9.0",
-    "eslint-plugin-babel": "^3.3.0",
-    "eslint-plugin-mocha": "^4.4.0",
+    "eslint": "^3.4.0",
+    "eslint-plugin-jasmine": "^1.8.1",
     "eslint-plugin-react": "^6.2.0",
     "jasmine": "^2.4.1",
     "jasmine-reporters": "^2.2.0",
@@ -71,8 +68,7 @@
     }
   },
   "optionalDependencies": {
-    "wnpm-ci": "^6.1.166",
-    "eslint-config-wix": "^1.0.138"
+    "wnpm-ci": "^6.1.166"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"

@@ -1,6 +1,21 @@
 {
-  "extends": "wix/react",
+  "parser": "babel-eslint",
+  "plugins": [
+    "eslint-plugin-react",
+    "jasmine"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:jasmine/recommended"
+  ],
   "rules": {
     "no-use-before-define": 0
+  },
+  "globals": {
+    "require": true
+  },
+  "env": {
+    "jasmine": true
   }
 }
