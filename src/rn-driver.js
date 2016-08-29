@@ -3,7 +3,7 @@ import BaseDriver from './base-driver';
 
 export default class RNDriver extends BaseDriver {
 
-  constructor(path, mocks, isRelativePathFromSrc = true) {
-    super(path, {'react-native': React, ...mocks}, isRelativePathFromSrc);
+  constructor({path, mocks, isRelativePathFromRoot = true, rootFolder = 'src/'}) {
+    super({path, mocks: {'react-native': React, ...mocks}, isRelativePathFromRoot, rootFolder});
   }
 }

@@ -4,7 +4,11 @@ describe('base driver test', () => {
   let driver;
 
   beforeEach(() => {
-    driver = new MyDriver('../test/mocks/dummy-react-native-component', {}, false);
+    driver = new MyDriver({
+      path: '../test/mocks/dummy-react-native-component',
+      mocks: {},
+      isRelativePathFromRoot: false
+    });
   });
 
   it('should render component', () => {

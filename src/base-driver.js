@@ -3,9 +3,11 @@ import React from 'react';
 
 export default class BaseDriver {
 
-  constructor(path, mocks, isRelativePathFromSrc = true) {
+  
+  constructor({path, mocks, isRelativePathFromRoot = true, rootFolder = 'src/'}) {
     this.mocks = mocks;
-    this.path = isRelativePathFromSrc ? `../../../src/${path}` : path;
+    this.rootFolder = rootFolder;
+    this.path = isRelativePathFromRoot ? `../../../${this.rootFolder}${path}` : path;
   }
 
   render(props) {
