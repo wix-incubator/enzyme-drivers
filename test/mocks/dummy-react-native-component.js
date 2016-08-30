@@ -1,15 +1,16 @@
 import React, {View, Text, PropTypes} from 'react-native';
 
-export default function DummyReactNativeComponent({text}) {
+export default function DummyReactNativeComponent({text, style}) {
   return (
     <View>
-      <Text testID="myText" style={{fontSize: 12, backgroundColor: 'black'}}>It works!</Text>
+      <Text testID="myText">It works!</Text>
       <Text testID="textFromProp">{text}</Text>
-      <Text testID="textWithArrayStyle" style={[{fontSize: 12, backgroundColor: 'black'}, {fontSize: 13}]}>This should work too</Text>
+      <Text testID="textWithCustomStyle" style={style}>This should work too</Text>
     </View>
   );
 }
 
 DummyReactNativeComponent.propTypes = {
-  text: PropTypes.string
+  text: PropTypes.string,
+  style: PropTypes.any
 };

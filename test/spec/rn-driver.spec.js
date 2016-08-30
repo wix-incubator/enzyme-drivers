@@ -17,23 +17,54 @@ describe('base driver test', () => {
     expect(driver.text).toBe('It works!');
   });
 
-  it('should expose getStylesByTestId', () => {
-    driver = new MyDriver({
-      path: '../test/mocks/dummy-react-native-component',
-      mocks: {},
-      isRelativePathFromRoot: false
-    });
-    driver.render({text: 'yoba'});
+  describe('getStylesByTestId', () => {
 
-    expect(driver.myTextStyles).toEqual({
-      fontSize: 12,
-      backgroundColor: 'black'
+    let driver;
+    beforeEach(() => {
+      driver = new MyDriver({
+        path: '../test/mocks/dummy-react-native-component',
+        mocks: {},
+        isRelativePathFromRoot: false
+      });
     });
 
-    expect(driver.arrayStyles).toEqual({
-      fontSize: 13,
-      backgroundColor: 'black'
+    it('should support simple styles', () => {
+      driver.render({style: {
+        fontSize: 12,
+        backgroundColor: 'black'
+      }});
+
+      expect(driver.customStyles).toEqual({
+        fontSize: 12,
+        backgroundColor: 'black'
+      });
     });
+
+    it('should support style arrays', () => {
+      driver.render({style: [
+        {
+          fontSize: 12,
+          backgroundColor: 'black'
+        },
+        {
+          fontSize: 13
+        },
+        false && {
+          irrelevant: 'false does not get included'
+        },
+        true && {
+          height: 15
+        }
+      ]
+      });
+
+      expect(driver.customStyles).toEqual({
+        fontSize: 13,
+        height: 15,
+        backgroundColor: 'black'
+      });
+    });
+
   });
 });
 
@@ -43,11 +74,7 @@ class MyDriver extends RNDriver {
     return this.getElementByTestId('myText').props().children;
   }
 
-  get myTextStyles() {
-    return this.getStylesByTestId('myText');
-  }
-
-  get arrayStyles() {
-    return this.getStylesByTestId('textWithArrayStyle');
+  get customStyles() {
+    return this.getStylesByTestId('textWithCustomStyle');
   }
 }
