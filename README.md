@@ -1,6 +1,11 @@
 [![TDD Approved](https://img.shields.io/badge/TDD-Approved-green.svg)]()
 # Enzyme Drivers
 
+* [What](#say-what)
+* [Why](#but-why)
+* [How](#how)
+* [API](#api)
+
 ### Say What??
 
 Enzyme Drivers is a libraray which will make your [enzyme](https://github.com/airbnb/enzyme) based tests to be a lot cleaner and orginized. 
