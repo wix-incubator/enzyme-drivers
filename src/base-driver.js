@@ -24,4 +24,8 @@ export default class BaseDriver {
     const el = this.component.findWhere(node => node.prop('testID') === testId);
     return el;
   }
+
+  childrenOf(testId) {
+    return this.byId(testId).props().children;
+  }
 }
