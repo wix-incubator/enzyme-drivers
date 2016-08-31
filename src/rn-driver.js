@@ -12,6 +12,10 @@ export default class RNDriver extends BaseDriver {
     return this.stylesById(testId);
   }
 
+  tapOn(testId) {
+    this.byId(testId).simulate('press');
+  }
+
   stylesById(testId) {
     let styles = this.byId(testId).props().style;
     if (styles instanceof Array) {

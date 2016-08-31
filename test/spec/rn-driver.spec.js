@@ -65,6 +65,13 @@ describe('base driver test', () => {
       });
     });
 
+    it('should tapOn', () => {
+      const tapSpy = jasmine.createSpy('tap');
+      driver.render({text: 'yoba', onTap: tapSpy});
+      driver.tap();
+      expect(tapSpy).toHaveBeenCalled();
+    });
+
   });
 });
 
@@ -72,6 +79,10 @@ describe('base driver test', () => {
 class MyDriver extends RNDriver {
   get text() {
     return this.byId('myText').props().children;
+  }
+
+  tap() {
+    this.tapOn('myText');
   }
 
   get customStyles() {
