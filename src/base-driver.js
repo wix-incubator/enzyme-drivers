@@ -3,7 +3,7 @@ import React from 'react';
 
 export default class BaseDriver {
 
-  
+
   constructor({path, mocks, isRelativePathFromRoot = true, rootFolder = 'src/'}) {
     this.mocks = mocks;
     this.rootFolder = rootFolder;
@@ -16,6 +16,11 @@ export default class BaseDriver {
   }
 
   getElementByTestId(testId) {
+    console.warn('--- DEPRECATED --- getElementByTestId is deprecated. use byId instead'); // eslint-disable-line
+    return this.byId(testId);
+  }
+
+  byId(testId) {
     const el = this.component.findWhere(node => node.prop('testID') === testId);
     return el;
   }

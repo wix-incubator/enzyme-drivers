@@ -8,7 +8,12 @@ export default class RNDriver extends BaseDriver {
   }
 
   getStylesByTestId(testId) {
-    let styles = this.getElementByTestId(testId).props().style;
+    console.warn('--- DEPRECATED --- getStylesByTestId is deprecated. use stylesById instead'); // eslint-disable-line
+    return this.stylesById(testId);
+  }
+
+  stylesById(testId) {
+    let styles = this.byId(testId).props().style;
     if (styles instanceof Array) {
       styles = styles.reduce((acc, obj) => ({...acc, ...obj}));
     }

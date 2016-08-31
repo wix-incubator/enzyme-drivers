@@ -17,6 +17,6 @@ describe('base driver test', () => {
 
 class MyDriver extends BaseDriver {
   get text() {
-    return this.getElementByTestId('myText').props().children;
+    return this.byId('myText').props().children;
   }
 }

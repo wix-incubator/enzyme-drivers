@@ -71,10 +71,10 @@ describe('base driver test', () => {
 
 class MyDriver extends RNDriver {
   get text() {
-    return this.getElementByTestId('myText').props().children;
+    return this.byId('myText').props().children;
   }
 
   get customStyles() {
-    return this.getStylesByTestId('textWithCustomStyle');
+    return this.stylesById('textWithCustomStyle');
   }
 }
