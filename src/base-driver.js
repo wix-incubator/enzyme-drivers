@@ -20,12 +20,16 @@ export default class BaseDriver {
     return this.byId(testId);
   }
 
-  byId(testId) {
-    const el = this.component.findWhere(node => node.prop('testID') === testId);
-    return el;
+  propsOf(testId) {
+    return this.byId(testId).props();
   }
 
   childrenOf(testId) {
-    return this.byId(testId).props().children;
+    return this.propsOf(testId).children;
+  }
+
+  byId(testId) {
+    const el = this.component.findWhere(node => node.prop('testID') === testId);
+    return el;
   }
 }

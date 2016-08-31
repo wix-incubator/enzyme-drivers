@@ -16,6 +16,11 @@ describe('base driver test', () => {
     expect(driver.text).toBe('It works!');
     expect(driver.textValue).toBe('It works!');
   });
+
+  it('should get props', () => {
+    driver.render({text: 'yoba', style: {color: 'red'}});
+    expect(driver.textProps.style).toEqual({color: 'red'});
+  });
 });
 
 class MyDriver extends BaseDriver {
@@ -25,5 +30,9 @@ class MyDriver extends BaseDriver {
 
   get textValue() {
     return this.childrenOf('myText');
+  }
+
+  get textProps() {
+    return this.propsOf('myText');
   }
 }
