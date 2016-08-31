@@ -3,7 +3,9 @@
 
 ### Say What??
 
-Enzyme Drivers is a libraray which will make your [enzyme](https://github.com/airbnb/enzyme) based tests to be a lot cleaner and orginized.
+Enzyme Drivers is a libraray which will make your [enzyme](https://github.com/airbnb/enzyme) based tests to be a lot cleaner and orginized. 
+
+Do you write your apps in angular? No problem, we got you covered. Check out [turnerjs.](https://github.com/wix/turnerjs)
 
 ### But, Why??
 
@@ -49,7 +51,21 @@ it('should render component', () => {
 });
 ```
 
-Looks neat right? The test is very readable and clear. Now let's write the driver
+Looks neat right? The test is very readable and clear. Let's write another one. Let's test that tap is working:
+
+```jsx
+it('should tapOn', () => {
+  const tapSpy = jasmine.createSpy('tap');
+  //given
+  driver.render({text: 'yoba', onTap: tapSpy});
+  //when
+  driver.tap();
+  //then
+  expect(tapSpy).toHaveBeenCalled();
+});
+```
+
+Now let's write the driver
 
 ```jsx
 // setup the driver in the beforeEach
