@@ -8,15 +8,15 @@
 
 ### Say What??
 
-Enzyme Drivers is a library that will help you write [enzyme](https://github.com/airbnb/enzyme)-based tests in a way that is much cleaner and better organized than you might without it. 
+Enzyme Drivers is a library that will help you write [enzyme](https://github.com/airbnb/enzyme)-based tests in a way that is much cleaner and better organized than you might without it.
 
 *Note: Do you write your apps in angular? No problem, we've got you covered. Check out [turnerjs](https://github.com/wix/turnerjs), which implements a similar concept for angular components.*
 
 ### But, Why??
 
-[Enzyme](https://github.com/airbnb/enzyme) is a great tool for writing component tests for React components. The only problem is the amount of bolierplate involved...especially once you try to write tests for React Native components. (You are testing your React Native app, right? Right.) That's because you can't render anything that includes native binaries in node, so any component that relies on native code must use mocks. Lots of them. 
+[Enzyme](https://github.com/airbnb/enzyme) is a great tool for writing component tests for React components. The only problem is the amount of bolierplate involved...especially once you try to write tests for React Native components. (You are testing your React Native app, right? Right.) That's because you can't render anything that includes native binaries in node, so any component that relies on native code must use mocks. Lots of them.
 
-But you know must test, so what can you do? **Enzyme Drivers** to the resuce!
+But you know you must test, so what can you do? **Enzyme Drivers** to the resuce!
 
 Enzyme Drivers introduces a new way of organazing your enzyme tests, using test drivers. Of course, the concept is not really new. Test drivers have been with us for a long time now and we like them a lot. Now we have them for React components as well.
 
