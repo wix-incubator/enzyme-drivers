@@ -50,10 +50,10 @@
     "jasmine": "^2.4.1",
     "jasmine-reporters": "^2.2.0",
     "jasmine2-reporter": "^0.2.0",
-    "react": "^0.14.0",
-    "react-addons-test-utils": "^0.14.8",
-    "react-dom": "^0.14.0",
-    "react-native": "0.25.1",
+    "react": "15.2.1",
+    "react-addons-test-utils": "~15.2.0",
+    "react-dom": "~15.2.0",
+    "react-native": "0.31.0",
     "react-native-mock": "^0.2.6"
   },
   "babel": {

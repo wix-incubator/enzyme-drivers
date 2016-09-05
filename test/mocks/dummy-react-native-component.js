@@ -13,5 +13,5 @@ export default function DummyReactNativeComponent({text, style, onTap}) {
 DummyReactNativeComponent.propTypes = {
   text: PropTypes.string,
   style: PropTypes.any,
-  onTap: PropTypes.function
+  onTap: PropTypes.func
 };
