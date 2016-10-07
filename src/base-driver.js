@@ -32,4 +32,13 @@ export default class BaseDriver {
     const el = this.component.findWhere(node => node.prop('testID') === testId);
     return el;
   }
+
+  get state() {
+    return this.component.state();
+  }
+
+  setState(state) {
+    this.component.setState(state);
+  }
+
 }
