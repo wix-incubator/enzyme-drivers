@@ -4,14 +4,15 @@ import React from 'react';
 export default class BaseDriver {
 
 
-  constructor({path, mocks, isRelativePathFromRoot = true, rootFolder = 'src/'}) {
+  constructor({path, mocks, isRelativePathFromRoot = true, rootFolder = 'src/', targetImport = 'default'}) {
     this.mocks = mocks;
     this.rootFolder = rootFolder;
+    this.targetImport = targetImport;
     this.path = isRelativePathFromRoot ? `../../../${this.rootFolder}${path}` : path;
   }
 
   render(props) {
-    const Component = require('proxyquire').noCallThru()(this.path, {...this.mocks}).default;
+    const Component = require('proxyquire').noCallThru()(this.path, {...this.mocks})[this.targetImport];
     this.component = shallow(<Component {...props}/>);
   }
 
