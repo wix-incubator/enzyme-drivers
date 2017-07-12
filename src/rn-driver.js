@@ -3,8 +3,8 @@ import BaseDriver from './base-driver';
 
 export default class RNDriver extends BaseDriver {
 
-  constructor({path, mocks, isRelativePathFromRoot = true, rootFolder = 'src/', targetImport}) {
-    super({path, mocks: {'react-native': React, ...mocks}, isRelativePathFromRoot, rootFolder, targetImport});
+  constructor({mocks, isRelativePathFromRoot = true, rootFolder = 'src/', ...props}) {
+    super({mocks: {'react-native': React, ...mocks}, isRelativePathFromRoot, rootFolder, ...props});
   }
 
   getStylesByTestId(testId) {

@@ -1,21 +1,32 @@
 import RNDriver from '../../src/rn-driver';
 
-describe('base driver test', () => {
+describe('rn driver test', () => {
   let driver;
 
-  beforeEach(() => {
+  it('should render component', () => {
     driver = new MyDriver({
       path: '../test/mocks/dummy-react-native-component',
       mocks: {},
       isRelativePathFromRoot: false
     });
-  });
 
-  it('should render component', () => {
     driver.render({text: 'yoba'});
 
     expect(driver.text).toBe('It works!');
   });
+
+  it('should support commonjs', () => {
+    driver = new MyDriver({
+      path:'../test/mocks/dummy-react-native-component-commonjs',
+      mocks: {},
+      isRelativePathFromRoot: false,
+      commonjs: true
+    })
+
+    driver.render({text: 'yoba'});
+
+    expect(driver.text).toBe('It works!');
+  })
 
   describe('getStylesByTestId', () => {
 
