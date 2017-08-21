@@ -22,6 +22,13 @@ describe('base driver test', () => {
     expect(driver.textProps.style).toEqual({color: 'red'});
   });
 
+  it('should render children on request', () => {
+    const childText = 'Hello there';
+    driver.render({childText});
+    const child = driver.renderChild('child-component');
+    expect(child.propsOf('child-component-text').children).toEqual(childText)
+  });
+
   describe('base driver state', () => {
     let driver;
 
