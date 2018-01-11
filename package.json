@@ -55,8 +55,8 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-native": "0.38.0",
-    "react-native-mock-render": "latest",
-    "react-test-renderer": "~0.0.19"
+    "react-native-mock-render": "~0.0.19",
+    "react-test-renderer": "^16.2.0"
   },
   "babel": {
     "env": {
