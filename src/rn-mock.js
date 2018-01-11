@@ -1,13 +1,13 @@
-import RNMock from 'react-native-mock';
 import React from 'react';
+import createReactClass from 'create-react-class';
 
 export const createMockReactComponent = (...components) => components.length ?
   components.reduce((acc, c) => ({
     ...acc,
     [c]: createMockReactComponent()
   }), {}) :
-  RNMock.createClass({
+  createReactClass({
     render() {
-      return <div {...this.props}>{this.props.children}</div>;
+      return <div {...this.props}>{this.props.children}</div>
     }
   });

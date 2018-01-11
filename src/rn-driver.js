@@ -1,4 +1,4 @@
-import React from 'react-native-mock';
+import React from 'react-native-mock-render';
 import BaseDriver from './base-driver';
 
 export default class RNDriver extends BaseDriver {

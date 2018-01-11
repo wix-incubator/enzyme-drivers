@@ -1,6 +1,6 @@
 {
   "name": "enzyme-drivers",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "testing utility lib",
   "main": "lib/index.js",
   "scripts": {
@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/wix/enzyme-drivers#readme",
   "dependencies": {
-    "enzyme": "^2.4.1",
+    "enzyme": "^3.0.0",
     "prop-types": "^15.5.10",
     "proxyquire": "^1.7.10"
   },
@@ -45,17 +45,18 @@
     "babel-preset-es2015": "^6.13.2",
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-0": "^6.5.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^3.4.0",
     "eslint-plugin-jasmine": "^1.8.1",
     "eslint-plugin-react": "^6.2.0",
     "jasmine": "^2.4.1",
     "jasmine-reporters": "^2.2.0",
     "jasmine2-reporter": "^0.2.0",
-    "react": "15.4.2",
-    "react-addons-test-utils": "~15.4.0",
-    "react-dom": "~15.4.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "react-native": "0.38.0",
-    "react-native-mock": "^0.2.6"
+    "react-native-mock-render": "latest",
+    "react-test-renderer": "~0.0.19"
   },
   "babel": {
     "env": {

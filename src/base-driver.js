@@ -1,8 +1,11 @@
 import {shallow} from 'enzyme';
 import React from 'react';
 
-export default class BaseDriver {
+import Enzyme from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+Enzyme.configure({ adapter: new Adapter() });
 
+export default class BaseDriver {
 
   constructor({path, mocks, isRelativePathFromRoot = true, rootFolder = 'src/', targetImport = 'default',
                 commonjs, component}) {
@@ -27,7 +30,7 @@ export default class BaseDriver {
   }
 
   renderChild(testId) {
-    const child = this.byId(testId).node;
+    const child = this.byId(testId).getElement();
     return new BaseDriver({component: child.type}).render(child.props);
   }
 
