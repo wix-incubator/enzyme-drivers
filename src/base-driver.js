@@ -22,7 +22,7 @@ export default class BaseDriver {
 
   render(props) {
     if (!this._component) {
-      const ComponentModule = require('proxyquire').noCallThru()(this.path, {...this.mocks});
+      const ComponentModule = this.mocks ? require('proxyquire').noCallThru()(this.path, {...this.mocks}) : require(this.path);
       this._component = this.commonjs ? ComponentModule : ComponentModule[this.targetImport];
     }
     this.component = shallow(<this._component {...props}/>);
