@@ -9,7 +9,9 @@
     "pretest": "npm run lint",
     "test": "export JASMINE_CONFIG_PATH=test/jasmine.json; export BABEL_ENV=specs; jasmine",
     "release": "wnpm-release -- --no-shrinkwrap",
-    "postrelease": "echo \"##teamcity[buildStatus text='Version: `jq -r '.version' package.json`; {build.status.text}']\""
+    "postrelease": "echo \"##teamcity[buildStatus text='Version: `jq -r '.version' package.json`; {build.status.text}']\"",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -39,7 +41,8 @@
     "prop-types": "^15.5.10",
     "proxyquire": "^1.7.10",
     "react-native-mock-render": "~0.0.25",
-    "react-test-renderer": "^16.2.0"
+    "react-test-renderer": "^16.2.0",
+    "snyk": "^1.192.3"
   },
   "devDependencies": {
     "babel-cli": "^6.11.4",
@@ -76,5 +79,6 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
-  }
+  },
+  "snyk": true
 }
