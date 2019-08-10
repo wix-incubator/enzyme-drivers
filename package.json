@@ -39,7 +39,7 @@
     "prop-types": "^15.5.10",
     "proxyquire": "^1.7.10",
     "react-native-mock-render": "~0.0.25",
-    "react-test-renderer": "^16.2.0"
+    "react-test-renderer": "16.8.6"
   },
   "devDependencies": {
     "babel-cli": "^6.11.4",
