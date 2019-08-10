@@ -1,6 +1,6 @@
 {
   "name": "enzyme-drivers",
-  "version": "3.0.0",
+  "version": "2.0.0",
   "description": "testing utility lib",
   "main": "lib/index.js",
   "scripts": {
@@ -35,7 +35,7 @@
   "dependencies": {
     "create-react-class": "^15.6.2",
     "enzyme": "^3.0.0",
-    "enzyme-adapter-react-16.3": "^1.7.1",
+    "enzyme-adapter-react-16": "^1.1.1",
     "prop-types": "^15.5.10",
     "proxyquire": "^1.7.10",
     "react-native-mock-render": "~0.0.25",
