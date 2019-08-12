@@ -2,7 +2,7 @@
   "name": "enzyme-drivers",
   "version": "3.0.0",
   "description": "testing utility lib",
-  "main": "lib/index.js",
+  "main": "src/index.js",
   "scripts": {
     "build": ":",
     "lint": "eslint src test",
@@ -73,7 +73,7 @@
       "<rootDir>/test/spec/support/jest-setup-framework.js"
     ],
     "transformIgnorePatterns": [
-      "node_modules/(?!(react-native|@react-native-community|wix-one-app-engine|react-native-testing-library|wix-social-chat-mobile)/)"
+      "node_modules/(?!(react-native|@react-native-community)/)"
     ],
     "globals": {
       "preset": "react-native"
