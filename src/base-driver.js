@@ -10,7 +10,9 @@ export default class BaseDriver {
   constructor({path, mocks, isRelativePathFromRoot = true, rootFolder = 'src/', targetImport = 'default',
                 commonjs, component}) {
     if (!component) {
-      this.mocks = mocks;
+      if (mocks) {
+        throw Error("mocks are deprecated")
+      }
       this.rootFolder = rootFolder;
       this.targetImport = targetImport;
       this.path = isRelativePathFromRoot ? `../../../${this.rootFolder}${path}` : path;
@@ -22,7 +24,7 @@ export default class BaseDriver {
 
   render(props) {
     if (!this._component) {
-      const ComponentModule = this.mocks ? require('proxyquire').noCallThru()(this.path, {...this.mocks}) : require(this.path);
+      const ComponentModule = require(this.path);
       this._component = this.commonjs ? ComponentModule : ComponentModule[this.targetImport];
     }
     this.component = shallow(<this._component {...props}/>);

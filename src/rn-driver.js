@@ -1,11 +1,9 @@
-import React from 'react-native-mock-render';
 import BaseDriver from './base-driver';
 
 export default class RNDriver extends BaseDriver {
 
-  constructor({mocks, isRelativePathFromRoot = true, mockReactNative = true, rootFolder = 'src/', ...props}) {
-    const _mocks = mockReactNative ? {'react-native': React, ...mocks} : mocks;
-    super({mocks: _mocks, isRelativePathFromRoot, rootFolder, ...props});
+  constructor({mocks, isRelativePathFromRoot = true, rootFolder = 'src/', ...props}) {
+    super({isRelativePathFromRoot, mocks, rootFolder, ...props});
   }
 
   getStylesByTestId(testId) {

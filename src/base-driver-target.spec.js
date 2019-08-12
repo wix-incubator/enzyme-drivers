@@ -1,4 +1,4 @@
-import BaseDriver from '../../src/base-driver';
+import BaseDriver from './base-driver';
 
 describe('base driver test using specified import target', () => {
   let driver;
@@ -7,7 +7,6 @@ describe('base driver test using specified import target', () => {
     driver = new MyDriver({
       path: '../test/mocks/dummy-class-component-no-default',
       targetImport: 'AnotherExportedComponent',
-      mocks: {},
       isRelativePathFromRoot: false
     });
   });

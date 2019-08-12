@@ -1,4 +1,4 @@
-import BaseDriver from '../../src/base-driver';
+import BaseDriver from './base-driver';
 
 describe('base driver test', () => {
   let driver;
@@ -6,7 +6,6 @@ describe('base driver test', () => {
   beforeEach(() => {
     driver = new MyDriver({
       path: '../test/mocks/dummy-component',
-      mocks: {},
       isRelativePathFromRoot: false
     });
   });
@@ -35,7 +34,6 @@ describe('base driver test', () => {
     beforeEach(() => {
       driver = new MyDriver({
         path: '../test/mocks/dummy-class-component',
-        mocks: {},
         isRelativePathFromRoot: false
       });
     });

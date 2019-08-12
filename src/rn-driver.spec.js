@@ -1,13 +1,11 @@
-import RNDriver from '../../src/rn-driver';
+import RNDriver from './rn-driver';
 
 describe('rn driver test', () => {
   let driver;
 
   it('should render component', () => {
     driver = new MyDriver({
-      path: '../test/mocks/dummy-react-native-component',
-      mocks: {},
-      isRelativePathFromRoot: false
+      component: require('../test/mocks/dummy-react-native-component').default,
     });
 
     driver.render({text: 'yoba'});
@@ -18,7 +16,6 @@ describe('rn driver test', () => {
   it('should support commonjs', () => {
     driver = new MyDriver({
       path:'../test/mocks/dummy-react-native-component-commonjs',
-      mocks: {},
       isRelativePathFromRoot: false,
       commonjs: true
     })
@@ -33,9 +30,7 @@ describe('rn driver test', () => {
     let driver;
     beforeEach(() => {
       driver = new MyDriver({
-        path: '../test/mocks/dummy-react-native-component',
-        mocks: {},
-        isRelativePathFromRoot: false
+        component: require('../test/mocks/dummy-react-native-component').default,
       });
     });
 

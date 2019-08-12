@@ -1,5 +1,5 @@
-import {createMockReactComponent} from '../../src/rn-mock';
-import React from 'react-native-mock-render';
+import {createMockReactComponent} from './rn-mock';
+import React from 'react';
 
 describe('createMockReactComponent', () => {
 

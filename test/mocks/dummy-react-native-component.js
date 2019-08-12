@@ -1,4 +1,5 @@
-import React, {View, Text} from 'react-native';
+import {View, Text} from 'react-native';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function DummyReactNativeComponent({text, style, onTap}) {
